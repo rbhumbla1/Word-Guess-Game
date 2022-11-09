@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Game</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Guess the Word!</h1>
+    </header>
+    <!-- Main -->
+    <main>
+        <section class="row justify-center">
+            <!-- Left Box for typing -->
+            <div class="typeArea" id="typingArea">
+                <figure class="justify-center">
+                  <h2 id="word"></h2>
+                </figure>
+            </div>
+            <!-- Right Box with Stats and Timer -->
+            <div class="timerArea">
+                <!-- <figure> -->
+                    <p>Stats:<br>Wins:0<br>Losses:0<br>Tries:0</p>
+                    <p id="timeRem"></p>
+                    <button id="timerBtn" class="btn">Start Timer</button>
+                <!-- </figure> -->
+            </div>
+        </section>
+    </main>
+    <!-- Javascript -->
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

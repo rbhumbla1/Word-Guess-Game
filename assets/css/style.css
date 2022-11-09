@@ -1,0 +1,112 @@
+:root{
+    --brown: rgb(163, 105, 17);
+    --dark: brown;
+    --choclate: rgb(99, 75, 36);
+    --back: rgb(235, 226, 211);
+}
+
+body {
+    background-color:var(--back);
+}
+
+
+/* Header section*/
+header {
+    display:flex; 
+    width:100%;
+    flex-direction:row;
+
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--brown);
+    color: #ffffff;
+}
+
+/* Title in header */
+h1 {
+    display: flex;
+    justify-content: center;
+    flex: 1 0 20%;
+    font-size: 48px;
+}
+
+
+
+
+
+/* Class selectors */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    margin-top:0rem;
+  }
+ 
+.justify-center {
+    justify-content: center;
+  }
+
+/* section titlestype area on left side of page */
+.typeArea {
+    flex: 1 0 40%;
+    padding: 2rem;
+    flex-direction: column;
+    /* when the screen resizes, make it so our columns don't jump in size */
+    transition: flex-basis 500ms linear;
+    margin: 2rem;
+    margin-left:4rem;
+    border: solid var(--brown);
+    text-align:center;
+  }
+
+ h2 {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    font-size: 36px;
+    color: var(--brown);
+    padding-top: 10%;
+}
+
+  /* content on right side */
+  .timerArea {
+    flex: 1 0 40%;
+    flex-direction: column;
+    padding: 2rem;
+    /* when the screen resizes, make it so our columns don't jump in size */
+    transition: flex-basis 500ms linear;
+    margin: 2rem;
+    margin-right:4rem;
+    border: solid var(--brown);
+    text-align:center;
+  }
+
+  .timerArea p {
+    display:flex;
+    justify-content:flex-start;
+    text-align: left;
+    font-size: 20px;
+    color: var(--choclate);
+    font-weight:bold;
+    margin-bottom: 10px;
+}
+
+.btn {
+    border: none;
+    background-color: var(--brown);
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+      0px;
+    color: hsl(0, 0%, 100%);
+    display: inline-block;
+    font-size: 22px;
+    line-height: 22px;
+    margin: 16px 16px 16px 20px;
+    padding: 14px 34px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+
