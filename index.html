@@ -20,12 +20,17 @@
             <div class="typeArea" id="typingArea">
                 <figure class="justify-center">
                   <h2 id="word"></h2>
+                  <h3 data-state="hidden"></h3>
                 </figure>
             </div>
             <!-- Right Box with Stats and Timer -->
             <div class="timerArea">
                 <!-- <figure> -->
-                    <p>Stats:<br>Wins:0<br>Losses:0<br>Tries:0</p>
+                    <!-- <p><span id="stats">Stats:<br>Wins:0<br>Losses:0<br>Tries:0</span></p> -->
+                    <p id="stats">Stats:</p>
+                    <p id="win">Wins: 0</p>
+                    <p id="loss">Loses: 0</p>
+                    <p id="tries">Tires: 0</p>
                     <p id="timeRem"></p>
                     <button id="timerBtn" class="btn">Start Timer</button>
                 <!-- </figure> -->
