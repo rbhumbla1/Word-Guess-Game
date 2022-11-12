@@ -9,17 +9,33 @@ var wLen = 0;
 var gTries = 0;
 var gWins = 0;
 var gLosses = 0;
+var counter = 0;
 
-var word = "string"; //hard coding for testing
-var wArr = word.split(''); //array of words characters
+var words = ["string","javascript","html", "stylesheet", "document"];
+var word = ""; //hard coding for testing
+var wArr = [];
 var kArr = [];
 
 function countdown(event) {
 
   event.stopPropagation();
 
-  //increment tries count
-  gTries++;
+ 
+
+  if(gTries < 5){
+    counter = gTries;
+  }else{
+    counter = gTries % 5;
+  }
+
+   //increment tries count
+   gTries++;
+
+  console.log(counter);
+
+  word = words[counter];
+  wArr = word.split('');
+
   kArr = Array(wArr.length).fill('-');
   wordTxt.textContent = (kArr.join(""));
 
@@ -93,6 +109,8 @@ function resetStats(){
   timeRem.textContent = "";
 }
 
+wordTxt.textContent = "ja--s-r--t";
+timeRem.textContent = "Click Start button to play.";
 timerBtn.addEventListener("click", countdown);
 
 resetBtn.addEventListener("click", resetStats);
