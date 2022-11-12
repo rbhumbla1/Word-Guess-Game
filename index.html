@@ -12,6 +12,7 @@
     <!-- Header -->
     <header>
         <h1>Guess the Word!</h1>
+        <button id="timerBtn" class="start justify-center">Start</button>
     </header>
     <!-- Main -->
     <main>
@@ -25,15 +26,17 @@
             </div>
             <!-- Right Box with Stats and Timer -->
             <div class="timerArea">
-                <!-- <figure> -->
+                <figure>
                     <!-- <p><span id="stats">Stats:<br>Wins:0<br>Losses:0<br>Tries:0</span></p> -->
-                    <p id="stats">Stats:</p>
+                    <!-- <p id="stats">Stats:</p> -->
                     <p id="win">Wins: 0</p>
                     <p id="loss">Loses: 0</p>
-                    <p id="tries">Tires: 0</p>
+                    <!-- <p id="tries">Tries: 0</p> -->
+                    <button id="resetBtn" class="btn">Reset Score</button>
+                    <div id="timerView" class="justify-center">
                     <p id="timeRem"></p>
-                    <button id="timerBtn" class="btn">Start Timer</button>
-                <!-- </figure> -->
+                    </div>  
+                </figure>
             </div>
         </section>
     </main>

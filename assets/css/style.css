@@ -14,8 +14,8 @@ body {
 header {
     display:flex; 
     width:100%;
-    flex-direction:row;
-
+    flex-direction:column;
+    align-items:center;
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: var(--brown);
@@ -115,10 +115,39 @@ h3{
     cursor: pointer;
   }
 
+.start {
+    border: none;
+    background-color: vhsl(0, 0%, 100%);
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+      0px;
+    color: var(--brown);
+    display: inline-block;
+    font-size: 22px;
+    line-height: 22px;
+    margin: 16px 16px 16px 20px;
+    padding: 14px 34px;
+    text-align: center;
+    cursor: pointer;
+    width:10%;
+    font-weight: bolder;
+  }
+
   #timeRem{
-    color:blue;
+    color:whitesmoke;
     padding:10px;
     padding-left:0;
+  }
+
+  #timerView{
+    width:100%;
+    height:30%;
+    background-color: blue;
+    padding:20px;
+    padding-left:200px;
+    border:2px;
+    text-align:center;
+    display: flex;
   }
 
 

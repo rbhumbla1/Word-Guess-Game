@@ -2,6 +2,7 @@ var timeRem = document.getElementById('timeRem');
 var wordTxt = document.getElementById('word');
 var statsTxt = document.getElementById('stats');
 var timerBtn = document.querySelector("#timerBtn");
+var resetBtn = document.querySelector("#resetBtn");
 var winner = document.querySelector("h3");
 var timeLeft = 5;
 var wLen = 0;
@@ -32,13 +33,13 @@ function countdown(event) {
       // Stops execution of action at set interval
       clearInterval(timeInterval);
       timeLeft = 5;
-      timeRem.textContent = "Done. Start timer for another round.";
+      timeRem.textContent = "Press Start button for another round.";
       // Calls function to update stats
       displayResults();
     } else {
       console.log("timer left");
       timeLeft--;
-    timeRem.textContent = "Start typing. " + timeLeft + " seconds remaining.";
+    timeRem.textContent =  timeLeft + " seconds remaining.";
       getUserInput();
     }
   }, 1000);
@@ -55,12 +56,12 @@ function displayResults() {
   }
   else{
     gLosses++;
-    winner.textContent = "";
+    winner.textContent = "Game Over";
   }
   //statsTxt.textContent = "Stats:<br />Wins:" + gWins + "<br />Losses:" + gLosses + "<br />Tries:" + gTries;
   document.querySelector('#win').textContent = "Wins: " + gWins;
   document.querySelector('#loss').textContent = "Loses: " + gLosses;
-  document.querySelector('#tries').textContent = "Tries: " + gTries;
+ // document.querySelector('#tries').textContent = "Tries: " + gTries;
 
 }
 
@@ -83,7 +84,18 @@ function getUserInput(event) {
 
 }
 
+function resetStats(){
+  gWins = 0;
+  gLosses = 0;
+
+  document.querySelector('#win').textContent = "Wins: " + gWins;
+  document.querySelector('#loss').textContent = "Loses: " + gLosses;
+  timeRem.textContent = "";
+}
+
 timerBtn.addEventListener("click", countdown);
+
+resetBtn.addEventListener("click", resetStats);
 
 window.addEventListener("keydown", getUserInput);
 
