@@ -12,7 +12,7 @@ The game has the following features:
 
 4. The user loses the game when the timer runs out before they have guessed all the letters.
 
-*  Total wins and losses for the user are displayed on the screen. 
+5. Total wins and losses for the user are displayed on the screen. 
 
 ## Mock Up
 ![Screenshot of the page](./assets/images/screenshot.JPG)
